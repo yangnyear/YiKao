@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.swpuiot.yikao.MainActivity">
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:orientation="vertical"
+    tools:context=".view.activity.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <fragment
+            android:name="com.swpuiot.yikao.view.fragment.HomePageFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_homepage"/>
     </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c7c6c6"/>
+
     <RadioGroup
+        android:id="@+id/rdg_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingTop="4dp">
+        android:orientation="horizontal">
+
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -25,7 +41,8 @@
             android:gravity="center"
             android:text="首页"
             android:textColor="#aba9a9"
-            android:textSize="10dp" />
+            android:textSize="10dp"/>
+
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -35,7 +52,8 @@
             android:gravity="center"
             android:text="资料"
             android:textColor="#aba9a9"
-            android:textSize="10dp" />
+            android:textSize="10dp"/>
+
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -45,7 +63,8 @@
             android:gravity="center"
             android:text="悬赏"
             android:textColor="#aba9a9"
-            android:textSize="10dp" />
+            android:textSize="10dp"/>
+
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -55,6 +74,6 @@
             android:gravity="center"
             android:text="我的"
             android:textColor="#aba9a9"
-            android:textSize="10dp" />
+            android:textSize="10dp"/>
     </RadioGroup>
-</RelativeLayout>
+</LinearLayout>
