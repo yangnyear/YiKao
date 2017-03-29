@@ -8,16 +8,16 @@
     tools:context=".view.activity.MainActivity">
 
     <FrameLayout
-        android:id="@+id/fl_main"
+        android:id="@+id/fl_fragmentcontener"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <fragment
-            android:name="com.swpuiot.yikao.view.fragment.HomePageFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:layout="@layout/fragment_homepage"/>
+        <!--<fragment-->
+            <!--android:name="com.swpuiot.yikao.view.fragment.HomePageFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--tools:layout="@layout/fragment_homepage"/>-->
     </FrameLayout>
 
     <View
@@ -30,9 +30,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="4dp">
 
         <RadioButton
+            android:id="@+id/rdb_homepage"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
@@ -44,6 +46,7 @@
             android:textSize="10dp"/>
 
         <RadioButton
+            android:id="@+id/rdb_ziliao"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
@@ -53,8 +56,20 @@
             android:text="资料"
             android:textColor="#aba9a9"
             android:textSize="10dp"/>
+        <RadioButton
+            android:id="@+id/rdb_add"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/add_selecter"
+            android:gravity="center"
+            android:text="发表"
+            android:textColor="#aba9a9"
+            android:textSize="10dp"/>
 
         <RadioButton
+            android:id="@+id/rdb_xuanshang"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
@@ -66,6 +81,7 @@
             android:textSize="10dp"/>
 
         <RadioButton
+            android:id="@+id/rdb_personal"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
