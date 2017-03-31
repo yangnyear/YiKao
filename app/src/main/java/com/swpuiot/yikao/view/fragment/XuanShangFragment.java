@@ -9,11 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.swpuiot.yikao.R;
+import com.swpuiot.yikao.presenter.xuanshangpresenter.XuanShangHolder;
 
 /**
  * Created by 羊荣毅_L on 2017/3/29.
+ * 悬赏
  */
-public class XuanShangFragment extends Fragment {
+public class XuanShangFragment extends Fragment implements XuanShangHolder.view{
     private View mView;
     @Nullable
     @Override

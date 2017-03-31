@@ -8,12 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.swpuiot.yikao.R;
+import com.swpuiot.yikao.presenter.personalpresent.PerSonalHolder;
 
 /**
  * Created by 羊荣毅_L on 2017/3/29.
  * 个人主页
  */
-public class PersonalFragment extends Fragment {
+public class PersonalFragment extends Fragment implements PerSonalHolder.view{
     private View mView;
     @Nullable
     @Override

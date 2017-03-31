@@ -7,8 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.swpuiot.yikao.R;
+import com.swpuiot.yikao.presenter.zhiliaopresenter.ZhiLiaoHolder;
+/**
+ * Created by 羊荣毅_L on 2017/3/29.
+ * 资料
+ */
 
-public class ZhiLiaoFragment extends Fragment {
+public class ZhiLiaoFragment extends Fragment implements ZhiLiaoHolder.view{
     private View mView;
     @Override
     public void onCreate(Bundle savedInstanceState) {

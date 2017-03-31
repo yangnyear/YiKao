@@ -12,10 +12,12 @@ import com.swpuiot.yikao.R;
 
 /**
  * Created by 羊荣毅_L on 2017/3/28.
+ * 首页
  */
 public class HomePageFragment extends Fragment{
     private View mView;
-    private RecyclerView mHomePageRecyclerView;
+    private RecyclerView mCourseRecyclerView;
+    private RecyclerView mNewsRecyclerView;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class HomePageFragment extends Fragment{
         setRetainInstance(true);
     }
     public void inite(){
-        mHomePageRecyclerView= (RecyclerView) mView.findViewById(R.id.rcl_homepage);
+        mCourseRecyclerView= (RecyclerView) mView.findViewById(R.id.rcl_homepage_course);
+        mNewsRecyclerView= (RecyclerView) mView.findViewById(R.id.rcl_homepage_news);
     }
 }
