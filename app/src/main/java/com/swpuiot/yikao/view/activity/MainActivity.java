@@ -11,6 +11,7 @@ import com.swpuiot.yikao.view.fragment.HomePageFragment;
 import com.swpuiot.yikao.view.fragment.PersonalFragment;
 import com.swpuiot.yikao.view.fragment.XuanShangFragment;
 import com.swpuiot.yikao.view.fragment.ZhiLiaoFragment;
+import com.youth.banner.Banner;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private HomePageFragment mHomePageFragment;
@@ -21,13 +22,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RadioGroup mRadioGroup;
     private FragmentManager mFragmentManager;
 
+    private Banner banner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inite();
+
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    public void inite() {
+        mRadioGroup = (RadioGroup) findViewById(R.id.rdg_main);
+        findViewById(R.id.rdb_homepage).setOnClickListener(this);
+        findViewById(R.id.rdb_ziliao).setOnClickListener(this);
+        findViewById(R.id.rdb_add).setOnClickListener(this);
+        findViewById(R.id.rdb_xuanshang).setOnClickListener(this);
+        findViewById(R.id.rdb_personal).setOnClickListener(this);
+
+        //初始化fragment
+        mHomePageFragment=new HomePageFragment();
+        mZhiLiaoFragment=new ZhiLiaoFragment();
+        mXuanShangFragment=new XuanShangFragment();
+        mPersonalFragment=new PersonalFragment();
+
+        mFragmentManager=getSupportFragmentManager();
         mRadioGroup.check(R.id.rdb_homepage);
-        mRadioGroup.setOnClickListener(this);
         mFragmentManager.beginTransaction()
                 .add(R.id.fl_fragmentcontener,mHomePageFragment)
                 .add(R.id.fl_fragmentcontener,mZhiLiaoFragment)
@@ -37,16 +62,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .hide(mXuanShangFragment)
                 .hide(mPersonalFragment)
                 .show(mHomePageFragment).commit();
-    }
-
-    public void inite() {
-        mRadioGroup = (RadioGroup) findViewById(R.id.rdg_main);
-        mFragmentManager=getSupportFragmentManager();
-        //初始化fragment
-        mHomePageFragment=new HomePageFragment();
-        mZhiLiaoFragment=new ZhiLiaoFragment();
-        mXuanShangFragment=new XuanShangFragment();
-        mPersonalFragment=new PersonalFragment();
     }
 
     @Override
@@ -60,16 +75,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .show(mHomePageFragment).commit();
                 break;
             case R.id.rdb_ziliao:
-
+                mFragmentManager.beginTransaction()
+                        .hide(mHomePageFragment)
+                        .hide(mXuanShangFragment)
+                        .hide(mPersonalFragment)
+                        .show(mZhiLiaoFragment) .commit();
                 break;
             case R.id.rdb_add:
-
+                // TODO: 2017/3/31
                 break;
             case R.id.rdb_xuanshang:
-
+                mFragmentManager.beginTransaction()
+                        .hide(mHomePageFragment)
+                        .hide(mZhiLiaoFragment)
+                        .hide(mPersonalFragment)
+                        .show(mXuanShangFragment) .commit();
                 break;
             case R.id.rdb_personal:
-
+                mFragmentManager.beginTransaction()
+                        .hide(mHomePageFragment)
+                        .hide(mZhiLiaoFragment)
+                        .hide(mXuanShangFragment)
+                        .show(mPersonalFragment) .commit();
                 break;
 
 

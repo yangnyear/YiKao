@@ -1,4 +1,4 @@
-package com.swpuiot.yikao.presenter;
+package com.swpuiot.yikao.presenter.mainpresenter;
 
 /**
  * Created by 羊荣毅_L on 2017/3/28.
