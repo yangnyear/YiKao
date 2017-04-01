@@ -3,6 +3,8 @@ package com.swpuiot.yikao.view.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,8 @@ public class HomePageFragment extends Fragment{
     private View mView;
     private RecyclerView mCourseRecyclerView;
     private RecyclerView mNewsRecyclerView;
+    private LinearLayoutManager mLinearLayoutManager;
+    private GridLayoutManager mGridLayoutManager;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,5 +39,8 @@ public class HomePageFragment extends Fragment{
     public void inite(){
         mCourseRecyclerView= (RecyclerView) mView.findViewById(R.id.rcl_homepage_course);
         mNewsRecyclerView= (RecyclerView) mView.findViewById(R.id.rcl_homepage_news);
+
+        mLinearLayoutManager=new LinearLayoutManager(getContext());
+        mGridLayoutManager=new GridLayoutManager(getContext(),4);
     }
 }
