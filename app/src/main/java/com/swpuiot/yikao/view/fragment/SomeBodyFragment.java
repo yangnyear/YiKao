@@ -34,6 +34,7 @@ public class SomeBodyFragment extends Fragment implements AdapterView.OnItemSele
     private String academyString;
     private String depatmentString;
     private View mView;
+    private MyEntityList mEntityList;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -53,11 +54,11 @@ public class SomeBodyFragment extends Fragment implements AdapterView.OnItemSele
         academyspinner= (Spinner) mView.findViewById(R.id.spinner_xuanshang_academy);
         courseSpinner= (Spinner) mView.findViewById(R.id.spinner_xuanshang_course);
         mReclOfDS= (RecyclerView) mView.findViewById(R.id.rcl_xuanshang_dashenlist);
-
+        mEntityList=MyEntityList.getMyEntityList();
         academyStringList=new ArrayList<>();
         departmentStringList=new ArrayList<>();
-        MyEntityList.loadStringNameList(academyStringList);
-        MyEntityList.loadStringContent(departmentStringList);
+        mEntityList.loadStringNameList(academyStringList);
+        mEntityList.loadStringContent(departmentStringList);
 
         academyAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, academyStringList);
         academyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

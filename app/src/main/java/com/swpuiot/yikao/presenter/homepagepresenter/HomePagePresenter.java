@@ -33,7 +33,7 @@ public class HomePagePresenter implements HomePageHolder.presenter,MyItemClickLi
         mEntityList = MyEntityList.getMyEntityList();
         bannerLoader = BannerLoader.getBannerLoader();
         listOfImageId=new ArrayList<>();
-        courseAdapter=new CourseRecyclerViewAdapter(mContext, MyEntityList.getCousdeList());
+        courseAdapter=new CourseRecyclerViewAdapter(mContext, mEntityList.getCousdeList());
         courseAdapter.setLongClickListener(this);
         courseAdapter.setClickListener(this);
     }
@@ -41,7 +41,7 @@ public class HomePagePresenter implements HomePageHolder.presenter,MyItemClickLi
 
     @Override
     public void setBunner(Boolean isAutoPlay) {
-        MyEntityList.loadImageList(listOfImageId);
+        mEntityList.loadImageList(listOfImageId);
         if (listOfImageId != null) {
             mView.setBunner(bannerLoader, listOfImageId, isAutoPlay);
         }

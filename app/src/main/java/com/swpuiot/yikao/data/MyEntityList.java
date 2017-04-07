@@ -28,7 +28,7 @@ public class MyEntityList {
         return sMyEntityList;
     }
 
-    public static void loadImageList(List<Integer> mIntegers) {
+    public  void loadImageList(List<Integer> mIntegers) {
         mIntegers.add(R.drawable.ic_abc_image_turn1);
         mIntegers.add(R.drawable.ic_abc_image_turn2);
         mIntegers.add(R.drawable.ic_abc_image_turn4);
@@ -40,7 +40,7 @@ public class MyEntityList {
         mIntegers.add(R.drawable.ic_abc_image_turn11);
     }
 
-    public static List<CourseEntity> getCousdeList() {
+    public  List<CourseEntity> getCousdeList() {
         if (coursList.size()==0){
             coursList.add(new CourseEntity(R.drawable.ic_abc_image_math, "高数"));
             coursList.add(new CourseEntity(R.drawable.ic_abc_image_english, "English"));
@@ -53,7 +53,7 @@ public class MyEntityList {
         }
         return coursList;
     }
-    public static void loadStringNameList( List<String> academyAdapter){
+    public  void loadStringNameList( List<String> academyAdapter){
         if (academyAdapter.size()==0){
            academyAdapter.add("校学生会");
            academyAdapter.add("计科院");
@@ -69,7 +69,7 @@ public class MyEntityList {
            academyAdapter.add("艺术院");
         }
     }
-    public static void loadStringContent(List<String> courseList){
+    public  void loadStringContent(List<String> courseList){
         if (courseList.size()==0){
             courseList.add("高数");
             courseList.add("英语");

@@ -19,6 +19,7 @@ import com.swpuiot.yikao.presenter.personalpresent.PerSonalHolder;
 public class PersonalFragment extends Fragment implements PerSonalHolder.view{
     private SimpleDraweeView mLogo;
     private TextView mProfession;
+    private TextView other;
     private View mView;
     @Nullable
     @Override
@@ -36,6 +37,7 @@ public class PersonalFragment extends Fragment implements PerSonalHolder.view{
     }
     private void inite(){
         mLogo= (SimpleDraweeView) mView.findViewById(R.id.image_userlogo);
-        mProfession= (TextView) mView.findViewById(R.id.text_onew_name);
+        mProfession= (TextView) mView.findViewById(R.id.text_user_name);
+        other= (TextView) mView.findViewById(R.id.text_user_other );
     }
 }

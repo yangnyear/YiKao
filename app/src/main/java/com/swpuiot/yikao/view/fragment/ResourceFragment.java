@@ -33,6 +33,7 @@ public class ResourceFragment extends Fragment implements ZhiLiaoHolder.view,Ada
     private String academyString;
     private String depatmentString;
     private View mView;
+    private MyEntityList mEntityList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,11 +54,12 @@ public class ResourceFragment extends Fragment implements ZhiLiaoHolder.view,Ada
         academyspinner= (Spinner) mView.findViewById(R.id.spinner_resource_academy);
         courseSpinner= (Spinner) mView.findViewById(R.id.spinner_resource_course);
         mRclOfziliao= (RecyclerView) mView.findViewById(R.id.rcl_resource_list);
+        mEntityList=MyEntityList.getMyEntityList();
 
         academyStringList = new ArrayList<>();
         departmentStringList = new ArrayList<>();
-        MyEntityList.loadStringNameList(academyStringList);
-        MyEntityList.loadStringContent(departmentStringList);
+        mEntityList.loadStringNameList(academyStringList);
+        mEntityList.loadStringContent(departmentStringList);
 
         academyAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, academyStringList);
         academyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

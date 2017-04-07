@@ -63,7 +63,7 @@
             android:layout_height="48dp"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/add_selecter"
+            android:drawableTop="@drawable/ic_abc_umage_add"
             android:gravity="center"
             android:text="发表"
             android:textColor="#aba9a9"
