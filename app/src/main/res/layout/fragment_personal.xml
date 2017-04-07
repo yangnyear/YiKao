@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <TextView
+    <FrameLayout
+        android:background="#ec6149"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="个人主业"
-        android:textSize="20sp"/>
-
+        android:layout_height="168dp">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image_userlogo"
+            app:roundAsCircle="true"
+            app:actualImageScaleType="centerInside"
+            android:layout_gravity="center"
+            app:placeholderImage="@drawable/ic_abc_image_dslogo"
+            android:layout_width="match_parent"
+            android:layout_height="68dp" />
+        <TextView
+            android:id="@+id/text_onew_name"
+            android:textColor="#fff"
+            android:layout_gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_marginTop="130dp"
+            android:text="物联网工程"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
 
 </LinearLayout>

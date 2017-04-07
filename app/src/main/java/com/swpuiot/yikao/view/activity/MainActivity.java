@@ -4,19 +4,21 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
 import android.widget.RadioGroup;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.view.fragment.HomePageFragment;
 import com.swpuiot.yikao.view.fragment.PersonalFragment;
-import com.swpuiot.yikao.view.fragment.XuanShangFragment;
-import com.swpuiot.yikao.view.fragment.ZhiLiaoFragment;
+import com.swpuiot.yikao.view.fragment.SomeBodyFragment;
+import com.swpuiot.yikao.view.fragment.ResourceFragment;
 import com.youth.banner.Banner;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private HomePageFragment mHomePageFragment;
-    private ZhiLiaoFragment mZhiLiaoFragment;
-    private XuanShangFragment mXuanShangFragment;
+    private ResourceFragment mZhiLiaoFragment;
+    private SomeBodyFragment mXuanShangFragment;
     private PersonalFragment mPersonalFragment;
 
     private RadioGroup mRadioGroup;
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fresco.initialize(MainActivity.this);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         inite();
 
@@ -47,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //初始化fragment
         mHomePageFragment=new HomePageFragment();
-        mZhiLiaoFragment=new ZhiLiaoFragment();
-        mXuanShangFragment=new XuanShangFragment();
+        mZhiLiaoFragment=new ResourceFragment();
+        mXuanShangFragment=new SomeBodyFragment();
         mPersonalFragment=new PersonalFragment();
 
         mFragmentManager=getSupportFragmentManager();

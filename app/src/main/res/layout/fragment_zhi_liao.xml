@@ -1,13 +1,57 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.swpuiot.yikao.view.fragment.ZhiLiaoFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".view.fragment.ResourceFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="资料"
-        android:textSize="20sp"/>
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="选择:"
+            android:textColor="#5e5d5d"
+            android:textSize="18sp"/>
+
+        <Spinner
+            android:id="@+id/spinner_resource_academy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:textSize="18sp"/>
+
+        <Spinner
+            android:id="@+id/spinner_resource_course"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"></Spinner>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcl_resource_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

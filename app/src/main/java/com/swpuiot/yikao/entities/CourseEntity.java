@@ -7,6 +7,11 @@ public class CourseEntity {
     int courseImageId;
     String courseName;
 
+    public CourseEntity(int courseImageId, String courseName) {
+        this.courseImageId = courseImageId;
+        this.courseName = courseName;
+    }
+
     public int getCourseImageId() {
         return courseImageId;
     }

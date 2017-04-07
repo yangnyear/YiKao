@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.presenter.personalpresent.PerSonalHolder;
 
@@ -15,6 +17,8 @@ import com.swpuiot.yikao.presenter.personalpresent.PerSonalHolder;
  * 个人主页
  */
 public class PersonalFragment extends Fragment implements PerSonalHolder.view{
+    private SimpleDraweeView mLogo;
+    private TextView mProfession;
     private View mView;
     @Nullable
     @Override
@@ -29,5 +33,9 @@ public class PersonalFragment extends Fragment implements PerSonalHolder.view{
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
+    }
+    private void inite(){
+        mLogo= (SimpleDraweeView) mView.findViewById(R.id.image_userlogo);
+        mProfession= (TextView) mView.findViewById(R.id.text_onew_name);
     }
 }
