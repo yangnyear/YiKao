@@ -18,7 +18,7 @@
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="68dp"
-            android:background="#ec6149"
+            android:background="?attr/colorPrimaryDark"
             android:fitsSystemWindows="true"
             app:theme="@android:style/ThemeOverlay.Material.Dark"
             app:title="易考"/>

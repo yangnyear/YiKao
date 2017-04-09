@@ -58,7 +58,7 @@
         android:background="#cecdcd"/>
 
     <LinearLayout
-        android:id="@+id/ll_school_life_user"
+        android:id="@+id/ll_personal_user_information"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="2dp">
@@ -128,7 +128,7 @@
         android:background="#e9e4e4"/>
 
     <LinearLayout
-        android:id="@+id/ll_school_life_update"
+        android:id="@+id/ll_personal_update"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="2dp">
@@ -164,7 +164,7 @@
         android:background="#e9e4e4"/>
 
     <LinearLayout
-        android:id="@+id/ll_school_life_text"
+        android:id="@+id/ll_personal_text"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="2dp">
