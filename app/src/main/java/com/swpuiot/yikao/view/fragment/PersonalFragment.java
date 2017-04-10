@@ -13,6 +13,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.presenter.personalpresent.PerSonalHolder;
 import com.swpuiot.yikao.presenter.personalpresent.PersonalPresent;
+import com.swpuiot.yikao.view.activity.UpdateResourceActivity;
 import com.swpuiot.yikao.view.activity.UserInformationActivity;
 
 /**
@@ -66,7 +67,8 @@ public class PersonalFragment extends Fragment implements PerSonalHolder.view, V
                 // TODO: 2017/4/9
                 break;
             case R.id.ll_personal_update:
-                // TODO: 2017/4/9
+                intent = new Intent(getContext(), UpdateResourceActivity.class);
+                mPresent.startActivity(intent);
                 break;
             case R.id.ll_personal_text:
                 // TODO: 2017/4/9

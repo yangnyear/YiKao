@@ -55,7 +55,6 @@ public class MyEntityList {
     }
     public  void loadStringNameList( List<String> academyAdapter){
         if (academyAdapter.size()==0){
-           academyAdapter.add("校学生会");
            academyAdapter.add("计科院");
            academyAdapter.add("石工院");
            academyAdapter.add("化工院");
@@ -69,16 +68,12 @@ public class MyEntityList {
            academyAdapter.add("艺术院");
         }
     }
-    public  void loadStringContent(List<String> courseList){
+    public  void loadGradeList(List<String> courseList){
         if (courseList.size()==0){
-            courseList.add("高数");
-            courseList.add("英语");
-            courseList.add("线代");
-            courseList.add("概率");
-            courseList.add("思修");
-            courseList.add("毛概");
-            courseList.add("马原");
-            courseList.add("近代史");
+            courseList.add("大一");
+            courseList.add("大二");
+            courseList.add("大三");
+            courseList.add("大四");
         }
     }
 }

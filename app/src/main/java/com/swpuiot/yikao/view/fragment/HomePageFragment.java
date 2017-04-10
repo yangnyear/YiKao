@@ -38,7 +38,7 @@ public class HomePageFragment extends Fragment implements HomePageHolder.view {
             mView = inflater.inflate(R.layout.fragment_homepage, container, false);
         }
         inite();
-        mPresenter.setBunner(false);
+        mPresenter.setBunner(true);
         mPresenter.setCourseRecyclerView(mGridLayoutManager);
 
         return mView;
