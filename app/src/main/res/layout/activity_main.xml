@@ -197,13 +197,13 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_abc_image_dslogo"/>
+                android:src="@drawable/ic_image_help"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="我来帮扶"
+                android:text="我来帮辅"
                 android:textColor="#484848"
                 android:textSize="16sp"/>
         </LinearLayout>

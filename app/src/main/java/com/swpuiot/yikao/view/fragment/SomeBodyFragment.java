@@ -23,7 +23,7 @@ public class SomeBodyFragment extends Fragment implements XuanShangHolder.view{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (mView==null){
-            mView=inflater.inflate(R.layout.fragment_xuanshang,container,false);
+            mView=inflater.inflate(R.layout.fragment_somebody,container,false);
         }
         inite();
         return mView;

@@ -21,7 +21,12 @@
             android:name=".view.activity.UserInformationActivity"
             android:theme="@style/MyAppTheme.AppTheme">
         </activity>
-        <activity android:name=".view.activity.UpdateResourceActivity"    android:theme="@style/MyAppTheme.AppTheme">
+        <activity
+            android:name=".view.activity.UpdateResourceActivity"
+            android:theme="@style/MyAppTheme.AppTheme">
+        </activity>
+        <activity android:name=".view.activity.LoginActivity"
+                  android:theme="@style/LoginAppTheme.AppTheme">
         </activity>
     </application>
 

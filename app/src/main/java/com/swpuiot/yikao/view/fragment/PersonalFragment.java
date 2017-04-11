@@ -13,6 +13,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.presenter.personalpresent.PerSonalHolder;
 import com.swpuiot.yikao.presenter.personalpresent.PersonalPresent;
+import com.swpuiot.yikao.view.activity.LoginActivity;
 import com.swpuiot.yikao.view.activity.UpdateResourceActivity;
 import com.swpuiot.yikao.view.activity.UserInformationActivity;
 
@@ -35,6 +36,7 @@ public class PersonalFragment extends Fragment implements PerSonalHolder.view, V
             mView = inflater.inflate(R.layout.fragment_personal, container, false);
         }
         inite();
+        mLogo.setOnClickListener(this);
         return mView;
     }
 
@@ -72,6 +74,10 @@ public class PersonalFragment extends Fragment implements PerSonalHolder.view, V
                 break;
             case R.id.ll_personal_text:
                 // TODO: 2017/4/9
+                break;
+            case R.id.image_userlogo:
+                intent = new Intent(getContext(), LoginActivity.class);
+                mPresent.startActivity(intent);
                 break;
 
         }

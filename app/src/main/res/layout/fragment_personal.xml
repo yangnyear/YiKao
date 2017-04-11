@@ -18,7 +18,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             app:actualImageScaleType="centerInside"
-            app:placeholderImage="@drawable/ic_abc_image_dslogo"
+            app:placeholderImage="@drawable/ic_image_my_logo"
             app:roundAsCircle="true"/>
 
         <TextView

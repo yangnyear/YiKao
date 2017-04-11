@@ -14,4 +14,10 @@
         <item name="colorPrimaryDark">#ec6149</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="LoginAppTheme.AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#3cc1ce</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
 </resources>

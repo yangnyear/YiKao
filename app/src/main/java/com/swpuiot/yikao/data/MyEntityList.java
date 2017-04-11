@@ -29,15 +29,9 @@ public class MyEntityList {
     }
 
     public  void loadImageList(List<Integer> mIntegers) {
-        mIntegers.add(R.drawable.ic_abc_image_turn1);
-        mIntegers.add(R.drawable.ic_abc_image_turn2);
-        mIntegers.add(R.drawable.ic_abc_image_turn4);
-        mIntegers.add(R.drawable.ic_abc_image_turn6);
-        mIntegers.add(R.drawable.ic_abc_image_turn7);
-        mIntegers.add(R.drawable.ic_abc_image_turn8);
-        mIntegers.add(R.drawable.ic_abc_image_turn9);
-        mIntegers.add(R.drawable.ic_abc_image_turn10);
-        mIntegers.add(R.drawable.ic_abc_image_turn11);
+        mIntegers.add(R.drawable.slide1);
+        mIntegers.add(R.drawable.slide2);
+
     }
 
     public  List<CourseEntity> getCousdeList() {
