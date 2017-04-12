@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    app:cardCornerRadius="8dp"
+    android:layout_height="260dp"
     android:layout_margin="5dp"
     android:padding="8dp"
-    android:layout_height="260dp">
+    app:cardCornerRadius="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
                         android:text="yangyang"
-                        android:textColor="#565656"
+                        android:textColor="#2b2a2a"
                         android:textSize="16sp"/>
 
                     <View
@@ -62,6 +62,7 @@
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
                     android:text="计科院皮皮学长"
+                    android:textColor="#2b2a2a"
                     android:textSize="15sp"/>
 
                 <LinearLayout
@@ -75,6 +76,7 @@
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
                         android:text="绩点::"
+                        android:textColor="#2b2a2a"
                         android:textSize="15sp"/>
 
                     <View
@@ -87,6 +89,7 @@
                         android:layout_height="36dp"
                         android:gravity="center_vertical"
                         android:text="4.0:"
+                        android:textColor="#2b2a2a"
                         android:textSize="15sp"/>
                 </LinearLayout>
 
@@ -101,6 +104,7 @@
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
                         android:text="联系电话:"
+                        android:textColor="#2b2a2a"
                         android:textSize="15sp"/>
 
                     <View
@@ -113,6 +117,7 @@
                         android:layout_height="36dp"
                         android:gravity="center_vertical"
                         android:text="13025671589:"
+                        android:textColor="#2b2a2a"
                         android:textSize="15sp"/>
                 </LinearLayout>
 
@@ -120,13 +125,12 @@
 
 
             <com.facebook.drawee.view.SimpleDraweeView
-                android:id="@+id/image_dslogo"
-                android:layout_width="68dp"
-                android:layout_height="match_parent"
+                android:id="@+id/image_somebody_dslogo"
+                android:layout_width="64dp"
+                android:layout_height="78dp"
                 android:layout_weight="2"
-                app:actualImageScaleType="centerInside"
-                app:placeholderImage="@drawable/ic_image_my_logo"
-                app:roundAsCircle="true"/>
+                app:roundAsCircle="true"
+                android:layout_gravity="center_vertical"/>
         </LinearLayout>
 
         <LinearLayout
@@ -142,6 +146,7 @@
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
                 android:text="擅长学科:"
+                android:textColor="#2b2a2a"
                 android:textSize="15sp"/>
 
             <View
@@ -154,6 +159,7 @@
                 android:layout_height="36dp"
                 android:gravity="center_vertical"
                 android:text="高数,线性代数,概率统计,c语言,Java,"
+                android:textColor="#2b2a2a"
                 android:textSize="15sp"/>
         </LinearLayout>
 
@@ -168,16 +174,16 @@
                 android:id="@+id/tt_somebody_numb_check"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
-                android:layout_marginLeft="30dp"
                 android:gravity="center_vertical"
                 android:text="浏览200次"
                 android:textSize="15sp"/>
 
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/image_somebody_logo_criticise"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="80dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="110dp"
                 app:actualImageScaleType="centerInside"
                 app:placeholderImage="@drawable/ic_abc_image_message"/>
 
@@ -185,14 +191,16 @@
                 android:id="@+id/tt_somebody_numb_criticise"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
                 android:text="200:"
                 android:textSize="15sp"/>
 
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/image_somebody_logo_zan"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="30dp"
                 app:actualImageScaleType="centerInside"
                 app:placeholderImage="@drawable/zan_selector"/>
@@ -201,6 +209,7 @@
                 android:id="@+id/tt_somebody_numb_zan"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
                 android:text="200:"
                 android:textSize="15sp"/>

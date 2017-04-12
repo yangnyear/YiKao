@@ -40,7 +40,7 @@ public class HomePageFragment extends Fragment implements HomePageHolder.view {
         inite();
         mPresenter.setBunner(true);
         mPresenter.setCourseRecyclerView(mGridLayoutManager);
-
+        mPresenter.setNewsRecyclerView(mLinearLayoutManager);
         return mView;
     }
 
@@ -53,7 +53,7 @@ public class HomePageFragment extends Fragment implements HomePageHolder.view {
 
     public void inite() {
         mCourseRecyclerView = (RecyclerView) mView.findViewById(R.id.rcl_homepage_course);
-//        mNewsRecyclerView = (RecyclerView) mView.findViewById(R.id.rcl_homepage_news);
+        mNewsRecyclerView = (RecyclerView) mView.findViewById(R.id.rcl_homepage_news);
 
         mLinearLayoutManager = new LinearLayoutManager(getContext());
         mGridLayoutManager = new GridLayoutManager(getContext(), 4);

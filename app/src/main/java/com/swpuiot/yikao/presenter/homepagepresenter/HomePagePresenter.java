@@ -10,6 +10,7 @@ import com.swpuiot.yikao.clicklistener.MyItemClickListener;
 import com.swpuiot.yikao.clicklistener.MyItemLongClickListener;
 import com.swpuiot.yikao.data.BannerLoader;
 import com.swpuiot.yikao.data.MyEntityList;
+import com.swpuiot.yikao.entities.NewsEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,7 @@ public class HomePagePresenter implements HomePageHolder.presenter,MyItemClickLi
     private CourseRecyclerViewAdapter courseAdapter;
     private NewsRecyclerViewAdapter newsAdapter;// TODO: 2017/4/3
     private List<Integer> listOfImageId;
+    private List<NewsEntity> mNewsEntityList;
 
 
     public HomePagePresenter(Context context, HomePageHolder.view view) {
@@ -33,9 +35,13 @@ public class HomePagePresenter implements HomePageHolder.presenter,MyItemClickLi
         mEntityList = MyEntityList.getMyEntityList();
         bannerLoader = BannerLoader.getBannerLoader();
         listOfImageId=new ArrayList<>();
+        mNewsEntityList=new ArrayList<>();
+        mEntityList.getNewsList(mNewsEntityList);
         courseAdapter=new CourseRecyclerViewAdapter(mContext, mEntityList.getCousdeList());
+        newsAdapter=new NewsRecyclerViewAdapter(mContext,mNewsEntityList);
         courseAdapter.setLongClickListener(this);
         courseAdapter.setClickListener(this);
+
     }
 
 
