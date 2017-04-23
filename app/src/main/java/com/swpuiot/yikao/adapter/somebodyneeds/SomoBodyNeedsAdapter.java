@@ -34,14 +34,14 @@ public class SomoBodyNeedsAdapter extends RecyclerView.Adapter<SomeBodyNeedsHold
 
     @Override
     public void onBindViewHolder(SomeBodyNeedsHolder holder, int position) {
-        holder.time.setText(mNeedSomeBodyEntityList.get(position).getTime());
-        holder.logo.setImageResource(mNeedSomeBodyEntityList.get(position).getLogoId());
-        holder.needsInfor.setText(mNeedSomeBodyEntityList.get(position).getNeedInfor());
-        holder.phoneNumb.setText(mNeedSomeBodyEntityList.get(position).getPhoneNumb());
-        holder.academcal.setText(mNeedSomeBodyEntityList.get(position).getAcumdate());
-        holder.checkNumb.setText(mNeedSomeBodyEntityList.get(position).getCheckNumb()+"");
-        holder.messageNumb.setText(mNeedSomeBodyEntityList.get(position).getMessageNumb()+"");
-        holder.zanNumb.setText(mNeedSomeBodyEntityList.get(position).getZanNumb()+"");
+//        holder.time.setText(mNeedSomeBodyEntityList.get(position).getTime());
+//        holder.logo.setImageResource(mNeedSomeBodyEntityList.get(position).getLogoId());
+//        holder.needsInfor.setText(mNeedSomeBodyEntityList.get(position).getNeedInfor());
+//        holder.phoneNumb.setText(mNeedSomeBodyEntityList.get(position).getPhoneNumb());
+//        holder.academcal.setText(mNeedSomeBodyEntityList.get(position).getAcumdate());
+//        holder.checkNumb.setText(mNeedSomeBodyEntityList.get(position).getCheckNumb()+"");
+//        holder.messageNumb.setText(mNeedSomeBodyEntityList.get(position).getMessageNumb()+"");
+//        holder.zanNumb.setText(mNeedSomeBodyEntityList.get(position).getZanNumb()+"");
     }
 
     @Override

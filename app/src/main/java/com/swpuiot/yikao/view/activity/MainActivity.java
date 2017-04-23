@@ -1,5 +1,6 @@
 package com.swpuiot.yikao.view.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +11,8 @@ import android.widget.RadioGroup;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.swpuiot.yikao.R;
-import com.swpuiot.yikao.presenter.mainpresenter.MainHolder;
-import com.swpuiot.yikao.presenter.mainpresenter.MainPresenter;
+import com.swpuiot.yikao.presenter.MainHolder;
+import com.swpuiot.yikao.presenter.MainPresenter;
 import com.swpuiot.yikao.view.fragment.HomePageFragment;
 import com.swpuiot.yikao.view.fragment.PersonalFragment;
 import com.swpuiot.yikao.view.fragment.ResourceFragment;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private View addView;
     private View ReLAddView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         inite();
+
 
     }
 
@@ -59,6 +62,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.rdb_xuanshang).setOnClickListener(this);
         findViewById(R.id.rdb_personal).setOnClickListener(this);
         ReLAddView = findViewById(R.id.rl_add_view);
+
+        findViewById(R.id.ll_update_resource).setOnClickListener(this);
+        findViewById(R.id.ll_add_somebody).setOnClickListener(this);
+        findViewById(R.id.ll_write_blog).setOnClickListener(this);
 
         findViewById(R.id.ll_update_resource).setOnClickListener(this);
         findViewById(R.id.ll_add_somebody).setOnClickListener(this);
@@ -99,7 +106,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     ReLAddView.setVisibility(View.INVISIBLE);
                     isScoller = false;
                 }
-
                 break;
             case R.id.rdb_xuanshang:
                 mPresenter.showSomeBodyFragment();
@@ -107,7 +113,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.rdb_personal:
                 mPresenter.showPersonalFragment();
                 break;
+            case R.id.ll_update_resource:
+                Intent intent=new Intent(MainActivity.this,UpdateResourceActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.ll_add_somebody:
+                // TODO: 2017/4/23
+                break;
 
+            case R.id.ll_write_blog:
+                // TODO: 2017/4/23
+                break;
 
         }
     }

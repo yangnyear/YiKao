@@ -1,5 +1,6 @@
-package com.swpuiot.yikao.presenter.updateresource;
+package com.swpuiot.yikao.presenter;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -14,5 +15,9 @@ public interface UpdateResourceHolder {
         void loadStringContent(List<String> courseList);
 
         void loadGradeList(List<String> academyAdapter);
+
+        void SendFile(String fileName, String fileproduce, String academyString, String depatmentString, String fileexcept);
+
+        void bindFile(File file);
     }
 }

@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.Window;
 
 import com.swpuiot.yikao.R;
-import com.swpuiot.yikao.presenter.userinformation.UserInformationHolder;
+import com.swpuiot.yikao.presenter.UserInformationHolder;
 
 public class UserInformationActivity extends AppCompatActivity implements UserInformationHolder.view ,View.OnClickListener{
 

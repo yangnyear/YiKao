@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.data.MyEntityList;
-import com.swpuiot.yikao.presenter.zhiliaopresenter.ResourceHolder;
+import com.swpuiot.yikao.presenter.ResourceHolder;
 
 
 /**

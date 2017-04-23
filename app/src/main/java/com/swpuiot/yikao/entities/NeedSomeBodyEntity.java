@@ -4,97 +4,79 @@ package com.swpuiot.yikao.entities;
  * Created by 羊荣毅_L on 2017/4/12.
  */
 public class NeedSomeBodyEntity {
-    private int logoId;
-    private String time;
-    private String needInfor;
-    private String course;
-    private String phoneNumb;
-    private String acumdate;
-    private int checkNumb;
-    private int messageNumb;
-    private int zanNumb;
 
-    public NeedSomeBodyEntity(int logoId, String time, String needInfor, String course, String phoneNumb, String acumdate, int checkNumb, int messageNumb, int zanNumb) {
-        this.logoId = logoId;
-        this.time = time;
-        this.needInfor = needInfor;
-        this.course = course;
-        this.phoneNumb = phoneNumb;
-        this.acumdate = acumdate;
-        this.checkNumb = checkNumb;
-        this.messageNumb = messageNumb;
-        this.zanNumb = zanNumb;
+    /**
+     * id : 1
+     * pubId : 4
+     * academy : 计科院
+     * pubGrade : 1
+     * helpSubject : C#
+     * helpNeed : 马上要考试了，求一位C#成绩好的大神
+     * pubPhone : 15845625812
+     */
+
+    private int id;
+    private int pubId;
+    private String academy;
+    private int pubGrade;
+    private String helpSubject;
+    private String helpNeed;
+    private String pubPhone;
+
+    public int getId() {
+        return id;
     }
 
-    public int getLogoId() {
-        return logoId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setLogoId(int logoId) {
-        this.logoId = logoId;
+    public int getPubId() {
+        return pubId;
     }
 
-    public String getTime() {
-        return time;
+    public void setPubId(int pubId) {
+        this.pubId = pubId;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public String getAcademy() {
+        return academy;
     }
 
-    public String getNeedInfor() {
-        return needInfor;
+    public void setAcademy(String academy) {
+        this.academy = academy;
     }
 
-    public void setNeedInfor(String needInfor) {
-        this.needInfor = needInfor;
+    public int getPubGrade() {
+        return pubGrade;
     }
 
-    public String getCourse() {
-        return course;
+    public void setPubGrade(int pubGrade) {
+        this.pubGrade = pubGrade;
     }
 
-    public void setCourse(String course) {
-        this.course = course;
+    public String getHelpSubject() {
+        return helpSubject;
     }
 
-    public String getPhoneNumb() {
-        return phoneNumb;
+    public void setHelpSubject(String helpSubject) {
+        this.helpSubject = helpSubject;
     }
 
-    public void setPhoneNumb(String phoneNumb) {
-        this.phoneNumb = phoneNumb;
+    public String getHelpNeed() {
+        return helpNeed;
     }
 
-    public String getAcumdate() {
-        return acumdate;
+    public void setHelpNeed(String helpNeed) {
+        this.helpNeed = helpNeed;
     }
 
-    public void setAcumdate(String acumdate) {
-        this.acumdate = acumdate;
+    public String getPubPhone() {
+        return pubPhone;
     }
 
-    public int getCheckNumb() {
-        return checkNumb;
+    public void setPubPhone(String pubPhone) {
+        this.pubPhone = pubPhone;
     }
 
-    public void setCheckNumb(int checkNumb) {
-        this.checkNumb = checkNumb;
-    }
-
-    public int getMessageNumb() {
-        return messageNumb;
-    }
-
-    public void setMessageNumb(int messageNumb) {
-        this.messageNumb = messageNumb;
-    }
-
-    public int getZanNumb() {
-        return zanNumb;
-    }
-
-    public void setZanNumb(int zanNumb) {
-        this.zanNumb = zanNumb;
-    }
 }

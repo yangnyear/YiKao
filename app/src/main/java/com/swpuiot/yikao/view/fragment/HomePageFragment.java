@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.data.BannerLoader;
-import com.swpuiot.yikao.presenter.homepagepresenter.HomePageHolder;
-import com.swpuiot.yikao.presenter.homepagepresenter.HomePagePresenter;
+import com.swpuiot.yikao.presenter.HomePageHolder;
+import com.swpuiot.yikao.presenter.HomePagePresenter;
 import com.youth.banner.Banner;
 
 import java.util.List;

@@ -2,9 +2,7 @@ package com.swpuiot.yikao.data;
 
 import com.swpuiot.yikao.R;
 import com.swpuiot.yikao.entities.CourseEntity;
-import com.swpuiot.yikao.entities.NeedSomeBodyEntity;
 import com.swpuiot.yikao.entities.NewsEntity;
-import com.swpuiot.yikao.entities.SomeBodyEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,27 +74,27 @@ public class MyEntityList {
         }
     }
 
-    public void getSomeBodyList(List<SomeBodyEntity> someBodyEntityList) {
-        if (someBodyEntityList.size() == 0) {
-            someBodyEntityList.add(new SomeBodyEntity("小羊", "昨天11.00", "计科院皮皮学长", 5, "1101101119", "Java,Android,SqlSerVer", 200, 40, 567, R.drawable.ic_image_my_logo));
-            someBodyEntityList.add(new SomeBodyEntity("大老板", "22分钟前", "西柚扛把子", 4, "1101101119", "高数,现代,概率", 200, 40, 567, R.drawable.ic_image_user));
-            someBodyEntityList.add(new SomeBodyEntity("冬日艳阳", "上周", "土建萌妹纸", 5, "1101101119", "工程力学,空间结构学r", 200, 40, 567, R.drawable.ic_abc_image_turn6));
-            someBodyEntityList.add(new SomeBodyEntity("小羊", "昨天11.00", "计科院皮皮学长", 5, "1101101119", "Java,Android,SqlSerVer", 200, 40, 567, R.drawable.ic_image_text));
-            someBodyEntityList.add(new SomeBodyEntity("小羊", "昨天11.00", "计科院皮皮学长", 5, "1101101119", "Java,Android,SqlSerVer", 200, 40, 567, R.drawable.ic_image_text));
-            someBodyEntityList.add(new SomeBodyEntity("小羊", "昨天11.00", "计科院皮皮学长", 5, "1101101119", "Java,Android,SqlSerVer", 200, 40, 567, R.drawable.ic_image_text));
-        }
-    }
+//    public void getSomeBodyList(List<SomeBodyEntity> someBodyEntityList) {
+//        if (someBodyEntityList.size() == 0) {
+//            someBodyEntityList.add(new SomeBodyEntity("小羊", "昨天11.00", "计科院皮皮学长", 5, "1101101119", "Java,Android,SqlSerVer", 200, 40, 567, R.drawable.ic_image_my_logo));
+//            someBodyEntityList.add(new SomeBodyEntity("大老板", "22分钟前", "西柚扛把子", 4, "1101101119", "高数,现代,概率", 200, 40, 567, R.drawable.ic_image_user));
+//            someBodyEntityList.add(new SomeBodyEntity("冬日艳阳", "上周", "土建萌妹纸", 5, "1101101119", "工程力学,空间结构学r", 200, 40, 567, R.drawable.ic_abc_image_turn6));
+//            someBodyEntityList.add(new SomeBodyEntity("小羊", "昨天11.00", "计科院皮皮学长", 5, "1101101119", "Java,Android,SqlSerVer", 200, 40, 567, R.drawable.ic_image_text));
+//            someBodyEntityList.add(new SomeBodyEntity("小羊", "昨天11.00", "计科院皮皮学长", 5, "1101101119", "Java,Android,SqlSerVer", 200, 40, 567, R.drawable.ic_image_text));
+//            someBodyEntityList.add(new SomeBodyEntity("小羊", "昨天11.00", "计科院皮皮学长", 5, "1101101119", "Java,Android,SqlSerVer", 200, 40, 567, R.drawable.ic_image_text));
+//        }
+//    }
 
-    public void getNeedsList(List<NeedSomeBodyEntity> needSomeBodyEntities) {
-        if (needSomeBodyEntities.size() == 0) {
-            for (int i = 0; i < 10; i++) {
-                needSomeBodyEntities.add(new NeedSomeBodyEntity(R.drawable.ic_image_my_logo, "11分钟前",
-                        "我是计科院物联网工程的一位皮皮学长,期末了需要找个大神辅导一下计算机组成原理",
-                        "计算机组成原理", "110110119", "计科院", 100, 200, 400));
-            }
-
-        }
-    }
+//    public void getNeedsList(List<NeedSomeBodyEntity> needSomeBodyEntities) {
+//        if (needSomeBodyEntities.size() == 0) {
+//            for (int i = 0; i < 10; i++) {
+//                needSomeBodyEntities.add(new NeedSomeBodyEntity(R.drawable.ic_image_my_logo, "11分钟前",
+//                        "我是计科院物联网工程的一位皮皮学长,期末了需要找个大神辅导一下计算机组成原理",
+//                        "计算机组成原理", "110110119", "计科院", 100, 200, 400));
+//            }
+//
+//        }
+//    }
 
     public void getNewsList(List<NewsEntity> newsList) {
         if (newsList.size()==0){

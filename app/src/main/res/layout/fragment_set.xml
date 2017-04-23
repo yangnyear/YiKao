@@ -34,14 +34,14 @@
         android:hint="E_mall"/>
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/button_setting"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_below="@+id/text_password"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_shape"
-        android:text="登录"
+        android:text="注册"
         android:textColor="#707070"
         android:textSize="20sp"/>
 

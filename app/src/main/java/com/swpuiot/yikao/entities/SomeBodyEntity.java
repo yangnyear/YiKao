@@ -4,107 +4,88 @@ package com.swpuiot.yikao.entities;
  * Created by 羊荣毅_L on 2017/4/6.
  */
 public class SomeBodyEntity {
-    private String name;
-    private String timr;
-    private String produce;
-    private int jidian;
-    private String phoneNumb;
-    private String goodat;
-    private int checknumb;
-    private int messageNumb;
-    private int zanNumb;
-    private int imageId;
 
-    public SomeBodyEntity(String name, String timr, String produce, int jidian, String phoneNumb, String goodat, int checknumb, int messageNumb, int zanNumb, int imageId) {
-        this.name = name;
-        this.timr = timr;
-        this.produce = produce;
-        this.jidian = jidian;
-        this.phoneNumb = phoneNumb;
-        this.goodat = goodat;
-        this.checknumb = checknumb;
-        this.messageNumb = messageNumb;
-        this.zanNumb = zanNumb;
-        this.imageId = imageId;
+    /**
+     * id : 3
+     * pubId : 4
+     * pubGrade : 2
+     * academy : 通用
+     * studySubject : 高数
+     * pubDescription : 计科院的一名女生，擅长高数
+     * shareScore : 4
+     * pubPhone : 15928543307
+     */
+
+    private int id;
+    private int pubId;
+    private int pubGrade;
+    private String academy;
+    private String studySubject;
+    private String pubDescription;
+    private int shareScore;
+    private String pubPhone;
+
+    public int getId() {
+        return id;
     }
 
-    public String getName() {
-        return name;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getPubId() {
+        return pubId;
     }
 
-    public String getTimr() {
-        return timr;
+    public void setPubId(int pubId) {
+        this.pubId = pubId;
     }
 
-    public void setTimr(String timr) {
-        this.timr = timr;
+    public int getPubGrade() {
+        return pubGrade;
     }
 
-    public String getProduce() {
-        return produce;
+    public void setPubGrade(int pubGrade) {
+        this.pubGrade = pubGrade;
     }
 
-    public void setProduce(String produce) {
-        this.produce = produce;
+    public String getAcademy() {
+        return academy;
     }
 
-    public int getJidian() {
-        return jidian;
+    public void setAcademy(String academy) {
+        this.academy = academy;
     }
 
-    public void setJidian(int jidian) {
-        this.jidian = jidian;
+    public String getStudySubject() {
+        return studySubject;
     }
 
-    public String getPhoneNumb() {
-        return phoneNumb;
+    public void setStudySubject(String studySubject) {
+        this.studySubject = studySubject;
     }
 
-    public void setPhoneNumb(String phoneNumb) {
-        this.phoneNumb = phoneNumb;
+    public String getPubDescription() {
+        return pubDescription;
     }
 
-    public String getGoodat() {
-        return goodat;
+    public void setPubDescription(String pubDescription) {
+        this.pubDescription = pubDescription;
     }
 
-    public void setGoodat(String goodat) {
-        this.goodat = goodat;
+    public int getShareScore() {
+        return shareScore;
     }
 
-    public int getChecknumb() {
-        return checknumb;
+    public void setShareScore(int shareScore) {
+        this.shareScore = shareScore;
     }
 
-    public void setChecknumb(int checknumb) {
-        this.checknumb = checknumb;
+    public String getPubPhone() {
+        return pubPhone;
     }
 
-    public int getMessageNumb() {
-        return messageNumb;
-    }
-
-    public void setMessageNumb(int messageNumb) {
-        this.messageNumb = messageNumb;
-    }
-
-    public int getZanNumb() {
-        return zanNumb;
-    }
-
-    public void setZanNumb(int zanNumb) {
-        this.zanNumb = zanNumb;
-    }
-
-    public int getImageId() {
-        return imageId;
-    }
-
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
+    public void setPubPhone(String pubPhone) {
+        this.pubPhone = pubPhone;
     }
 }

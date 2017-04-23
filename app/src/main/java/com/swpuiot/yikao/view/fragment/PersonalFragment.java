@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.swpuiot.yikao.R;
-import com.swpuiot.yikao.presenter.personalpresent.PerSonalHolder;
-import com.swpuiot.yikao.presenter.personalpresent.PersonalPresent;
+import com.swpuiot.yikao.presenter.PerSonalHolder;
+import com.swpuiot.yikao.presenter.PersonalPresent;
 import com.swpuiot.yikao.view.activity.LoginActivity;
 import com.swpuiot.yikao.view.activity.UpdateResourceActivity;
 import com.swpuiot.yikao.view.activity.UserInformationActivity;

@@ -1,4 +1,4 @@
-package com.swpuiot.yikao.presenter.homepagepresenter;
+package com.swpuiot.yikao.presenter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

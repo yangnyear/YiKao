@@ -1,4 +1,4 @@
-package com.swpuiot.yikao.presenter.zhiliaopresenter;
+package com.swpuiot.yikao.presenter;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;
