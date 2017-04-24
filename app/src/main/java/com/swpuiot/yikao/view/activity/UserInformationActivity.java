@@ -1,5 +1,6 @@
 package com.swpuiot.yikao.view.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,14 +23,7 @@ public class UserInformationActivity extends AppCompatActivity implements UserIn
     private void inite(){
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar_user_information));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        findViewById(R.id.ll).requestFocus();
-        findViewById(R.id.ll_reset_user_logo).setOnClickListener(this);
-        findViewById(R.id.ll_reset_user_name).setOnClickListener(this);
-        findViewById(R.id.ll_reset_user_sex).setOnClickListener(this);
-        findViewById(R.id.ll_reset_user_age).setOnClickListener(this);
-        findViewById(R.id.ll_reset_user_birth).setOnClickListener(this);
-        findViewById(R.id.ll_reset_user_star).setOnClickListener(this);
-        findViewById(R.id.tt_save).setOnClickListener(this);
+        findViewById(R.id.tt_edite).setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +34,12 @@ public class UserInformationActivity extends AppCompatActivity implements UserIn
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.tt_edite:
+                Intent intent=new Intent(UserInformationActivity.this,EditInforActivity.class);
+                startActivity(intent);
+                break;
 
+        }
     }
 }

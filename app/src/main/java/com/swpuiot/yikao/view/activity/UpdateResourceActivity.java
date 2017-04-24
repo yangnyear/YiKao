@@ -29,12 +29,15 @@ public class UpdateResourceActivity extends AppCompatActivity implements Adapter
     private Spinner academyspinner;
     private Spinner gradeSpinner;
     private ArrayAdapter<String> academyAdapter;
+    private ArrayAdapter<String> depatmentAdapter;
     private String academyString;
     private String depatmentString;
     private UpdateResourceHolder.presenter mPresenter;
     private TextView fileName;
+    private TextView fileProduce;
+    private TextView fileExcept;
     private Button delateFile;
-    private  File file;
+    private File file;
 
 
     @Override
@@ -48,6 +51,7 @@ public class UpdateResourceActivity extends AppCompatActivity implements Adapter
         setAcademySpinnerAdapter(academyspinner);
         setGradeSpinnerAdapter(gradeSpinner);
         fileName.setOnClickListener(this);
+        findViewById(R.id.tt_send_file).setOnClickListener(this);
     }
 
     private void inite() {
@@ -55,7 +59,9 @@ public class UpdateResourceActivity extends AppCompatActivity implements Adapter
         academyspinner = (Spinner) findViewById(R.id.spinner_academy);
         gradeSpinner = (Spinner) findViewById(R.id.spinner_grade);
         fileName = (TextView) findViewById(R.id.tt_file_name);
-        delateFile= (Button) findViewById(R.id.btn_removefile);
+        delateFile = (Button) findViewById(R.id.btn_removefile);
+        fileProduce = (TextView) findViewById(R.id.tt_file_information);
+        fileExcept = (TextView) findViewById(R.id.tt_file_course_namee);
 
     }
 
@@ -71,9 +77,9 @@ public class UpdateResourceActivity extends AppCompatActivity implements Adapter
     private void setGradeSpinnerAdapter(Spinner spinner) {
         List<String> gradList = new ArrayList<>();
         mPresenter.loadGradeList(gradList);
-        academyAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, gradList);
-        academyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(academyAdapter);
+        depatmentAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, gradList);
+        depatmentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(depatmentAdapter);
     }
 
     @Override
@@ -84,7 +90,8 @@ public class UpdateResourceActivity extends AppCompatActivity implements Adapter
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+        academyString = academyAdapter.getItem(position);
+        depatmentString = depatmentAdapter.getItem(position);
     }
 
     @Override
@@ -98,10 +105,29 @@ public class UpdateResourceActivity extends AppCompatActivity implements Adapter
             case R.id.tt_file_name:
                 openFileManegger(openFilemanegger);
                 break;
-            case R.id.tt_save:
-                // TODO: 2017/4/23
+            case R.id.tt_send_file:
+                onFileSend();
                 break;
         }
+    }
+
+    public void onFileSend() {
+        String Name = fileName.getText().toString().trim();
+        String produce = fileProduce.getText().toString().trim();
+        String except = fileExcept.getText().toString().trim();
+        if (Name.equals("")) {
+            Toast.makeText(UpdateResourceActivity.this, "请选择文件", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (produce.equals("")) {
+            Toast.makeText(UpdateResourceActivity.this, "请填写文件简介", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (except.equals("")) {
+            Toast.makeText(UpdateResourceActivity.this, "请填写文件所属科目", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        mPresenter.SendFile(Name, produce, academyString, depatmentString, except);
     }
 
     //添加附件
@@ -112,6 +138,7 @@ public class UpdateResourceActivity extends AppCompatActivity implements Adapter
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         startActivityForResult(intent, statusCoode);
     }
+
     //获得文件后返回Activity.RESULT_OK
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
