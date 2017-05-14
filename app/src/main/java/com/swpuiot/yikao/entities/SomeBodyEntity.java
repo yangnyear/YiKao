@@ -6,14 +6,19 @@ package com.swpuiot.yikao.entities;
 public class SomeBodyEntity {
 
     /**
-     * id : 3
-     * pubId : 4
+     * id : 9
+     * pubId : 7
      * pubGrade : 2
-     * academy : 通用
-     * studySubject : 高数
-     * pubDescription : 计科院的一名女生，擅长高数
+     * academy : 计科院
+     * studySubject : 数据结构
+     * pubDescription : 数据结构90分
      * shareScore : 4
-     * pubPhone : 15928543307
+     * pubPhone : 1095121033
+     * viewNumb : 0
+     * commentNumb : 0
+     * praiseNumb : 0
+     * time : null
+     * userPortrait : /static/img/touxiang.png
      */
 
     private int id;
@@ -24,6 +29,11 @@ public class SomeBodyEntity {
     private String pubDescription;
     private int shareScore;
     private String pubPhone;
+    private int viewNumb;
+    private int commentNumb;
+    private int praiseNumb;
+    private String time;
+    private String userPortrait;
 
     public int getId() {
         return id;
@@ -87,5 +97,45 @@ public class SomeBodyEntity {
 
     public void setPubPhone(String pubPhone) {
         this.pubPhone = pubPhone;
+    }
+
+    public int getViewNumb() {
+        return viewNumb;
+    }
+
+    public void setViewNumb(int viewNumb) {
+        this.viewNumb = viewNumb;
+    }
+
+    public int getCommentNumb() {
+        return commentNumb;
+    }
+
+    public void setCommentNumb(int commentNumb) {
+        this.commentNumb = commentNumb;
+    }
+
+    public int getPraiseNumb() {
+        return praiseNumb;
+    }
+
+    public void setPraiseNumb(int praiseNumb) {
+        this.praiseNumb = praiseNumb;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getUserPortrait() {
+        return userPortrait;
+    }
+
+    public void setUserPortrait(String userPortrait) {
+        this.userPortrait = userPortrait;
     }
 }

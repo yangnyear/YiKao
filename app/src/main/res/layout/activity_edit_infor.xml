@@ -143,6 +143,7 @@
             android:textSize="18dp"/>
 
         <TextView
+            android:id="@+id/tt_edit_user_sex"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="12dp"

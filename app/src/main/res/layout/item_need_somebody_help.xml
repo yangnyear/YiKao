@@ -30,7 +30,7 @@
             <TextView
                 android:id="@+id/tt_needs_somebody_time"
                 android:layout_width="0dp"
-                android:layout_height="68dp"
+                android:layout_height="48dp"
                 android:layout_weight="2"
                 android:gravity="start|center_vertical"
                 android:text="昨天14.00"

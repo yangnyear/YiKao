@@ -73,10 +73,8 @@ public class SomeBodyFragment extends Fragment implements SomeBodyHolder.view {
 
     private void setSomebodyAdapter() {
         List<SomeBodyEntity> someBodyEntities=new ArrayList<>();
-       // mEntityList.getSomeBodyList(someBodyEntities);
-        mNetWork=new NetWork("www.altman.top/easyExam/ad/study_all",someBodyEntities);
+        mNetWork=new NetWork(someBodyEntities);
         someBodyEntities= (List<SomeBodyEntity>) mNetWork.getSomeBodyList();
-
         SomeBodyRecyclerViewAdapter adapter=new SomeBodyRecyclerViewAdapter(getContext(),someBodyEntities);
         somebody.setAdapter(adapter);
     }

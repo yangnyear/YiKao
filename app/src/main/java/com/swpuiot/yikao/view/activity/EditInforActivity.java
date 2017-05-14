@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -34,6 +35,8 @@ public class EditInforActivity extends AppCompatActivity implements View.OnClick
     private SimpleDraweeView editLogo;
     private AlertDialog dialog;
     private Uri imageuri;
+    private LayoutInflater inflater;
+    private TextView sex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,8 @@ public class EditInforActivity extends AppCompatActivity implements View.OnClick
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         findViewById(R.id.ll).requestFocus();
 
+        inflater = LayoutInflater.from(EditInforActivity.this);
+
         editName = (EditText) findViewById(R.id.ed_name);
         editLogo = (SimpleDraweeView) findViewById(R.id.sim_edit_logo);
         findViewById(R.id.tt_save).setOnClickListener(this);
@@ -56,6 +61,7 @@ public class EditInforActivity extends AppCompatActivity implements View.OnClick
         findViewById(R.id.ll_edit_age).setOnClickListener(this);
         findViewById(R.id.ll_edit_birthday).setOnClickListener(this);
         findViewById(R.id.ll_edit_start).setOnClickListener(this);
+        sex = (TextView) findViewById(R.id.tt_edit_user_sex);
     }
 
     @Override
@@ -71,6 +77,7 @@ public class EditInforActivity extends AppCompatActivity implements View.OnClick
                 onEditLogoClicked();
                 break;
             case R.id.ll_edit_sex:
+                selecteSex();
                 break;
             case R.id.ll_edit_birthday:
                 break;
@@ -89,11 +96,19 @@ public class EditInforActivity extends AppCompatActivity implements View.OnClick
             case R.id.tt_check_logo:
                 // TODO: 2017/4/24
                 break;
+            case R.id.tt_choose_sex_boy:
+                dialog.dismiss();
+                sex.setText("男");
+
+                break;
+            case R.id.tt_choose_sex_girl:
+                dialog.dismiss();
+                sex.setText("女");
+                break;
         }
     }
 
     public void onEditLogoClicked() {
-        LayoutInflater inflater = LayoutInflater.from(EditInforActivity.this);
         View view = inflater.inflate(R.layout.layout_choose_logo, null, false);
         dialog = new AlertDialog
                 .Builder(EditInforActivity.this)
@@ -235,4 +250,15 @@ public class EditInforActivity extends AppCompatActivity implements View.OnClick
         File imageFile = new File(imagePath);
         // TODO: 2017/4/24
     }
+
+    public void selecteSex() {
+        View view = inflater.inflate(R.layout.layout_choose_sex, null, false);
+        dialog = new AlertDialog
+                .Builder(EditInforActivity.this)
+                .setView(view)
+                .show();
+        view.findViewById(R.id.tt_choose_sex_boy).setOnClickListener(EditInforActivity.this);
+        view.findViewById(R.id.tt_choose_sex_girl).setOnClickListener(EditInforActivity.this);
+    }
+
 }

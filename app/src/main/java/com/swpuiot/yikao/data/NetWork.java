@@ -1,5 +1,7 @@
 package com.swpuiot.yikao.data;
 
+import android.util.Log;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -19,17 +21,15 @@ import java.util.List;
 public class NetWork {
    private RequestParams mRequestParams;
     private AsyncHttpClient mHttpClient;
-    private String uri;
     private List<?> entityList;
 
-    public NetWork(String uri, List<?> entityList) {
-        this.uri = uri;
+    public NetWork( List<?> entityList) {
         this.entityList=entityList;
         mRequestParams = new RequestParams();
         mHttpClient = new AsyncHttpClient();
     }
     public List<?> getSomeBodyList(){
-        mHttpClient.get(uri,new AsyncHttpResponseHandler() {
+        mHttpClient.get("www.altman.top/easyExam/ad/study_all",new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
                 ObjectMapper objectMapper = new ObjectMapper();
@@ -42,7 +42,7 @@ public class NetWork {
 
             @Override
             public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-
+                Log.i("getSomeBodyList","the net work is lost");
             }
         });
         return entityList;
